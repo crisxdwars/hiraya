@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java If...Else</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java If...Else</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>Making Decisions in Code</h2>
+                <p>Conditional statements allow your program to make decisions. They execute a piece of code only if a certain condition is true.</p>
+                <p>Java uses standard logical conditions to form these decisions:</p>
+                 <ul class="content-list">
+                    <li>`if` is used to execute a block of code if a condition is true.</li>
+                    <li>`else` is used to execute a different block of code if the condition is false.</li>
+                    <li>`else if` is used to check a new condition if the first one was false.</li>
+                </ul>
+            </div>
+
+            <div class="tile">
+                <h2>The `if` Statement</h2>
+                <p>The `if` statement is the most basic control flow statement. It runs the code inside its curly braces `{}` only when its condition is `true`.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">int</span> score = 85;
+<span class="code-keyword">if</span> (score >= 75) {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Congratulations, you passed the exam!"</span>);
+}</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Congratulations, you passed the exam!</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2>The `else` Statement</h2>
+                <p>The `else` statement provides a secondary path for your code. It runs only when the `if` condition is `false`.</p>
+                 <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">int</span> number = -5;
+<span class="code-keyword">if</span> (number >= 0) {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"The number is positive."</span>);
+} <span class="code-keyword">else</span> {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"The number is negative."</span>);
+}</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>The number is negative.</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tile">
+                <h2>The `else if` Statement</h2>
+                <p>When you need to check multiple conditions in a sequence, you can use `else if`. Java will test each condition in order until one is true.</p>
+                 <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">int</span> grade = 88;
+<span class="code-keyword">if</span> (grade >= 90) {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Excellent! You got an A."</span>);
+} <span class="code-keyword">else if</span> (grade >= 80) {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Good job! You got a B."</span>);
+} <span class="code-keyword">else</span> {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"You can do better."</span>);
+}</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Good job! You got a B.</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                 <a href="java-booleans.html" class="previous-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </a>
+                <a href="java-switch.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html

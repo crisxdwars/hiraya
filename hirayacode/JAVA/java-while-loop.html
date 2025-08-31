@@ -1,0 +1,129 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java While Loop</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java While Loop</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>Repeating Actions with Loops</h2>
+                <p>Imagine you need to tell a robot to take 10 steps forward. Instead of writing the "take a step" command 10 times, you can use a loop to repeat the command automatically.</p>
+                <p>The `while` loop is a fundamental loop in Java that repeats a block of code as long as a specified condition remains `true`.</p>
+            </div>
+
+            <div class="tile">
+                <h2>The `while` Loop</h2>
+                <p>The `while` loop checks its condition *before* it runs the code inside. If the condition is true, the code block executes. This process repeats until the condition becomes false. Let's create a countdown for a rocket launch.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">int</span> countdown = 5;
+
+<span class="code-keyword">while</span> (countdown > 0) {
+  <span class="code-type">System</span>.out.<span class="code-method">println</span>(countdown + <span class="code-string">"..."</span>);
+  countdown--; <span class="code-comment">// Decrease countdown by 1 each time</span>
+}
+
+<span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Liftoff!"</span>);</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>5...
+4...
+3...
+2...
+1...
+Liftoff!</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2>The `do/while` Loop</h2>
+                <p>The `do/while` loop is a variation of the `while` loop. The key difference is that the `do/while` loop will execute the code block **at least once**, before it checks if the condition is true. This is useful for situations where you always want the action to happen at least one time, like showing a menu.</p>
+                 <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">import</span> java.util.Scanner;
+
+<span class="code-keyword">class</span> <span class="code-type">Menu</span> {
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">main</span>(<span class="code-type">String</span>[] args) {
+    <span class="code-type">Scanner</span> input = <span class="code-keyword">new</span> <span class="code-type">Scanner</span>(<span class="code-type">System</span>.in);
+    <span class="code-keyword">int</span> choice;
+
+    <span class="code-keyword">do</span> {
+      <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"\n--- MENU ---"</span>);
+      <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"1. Start Game"</span>);
+      <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"2. Load Game"</span>);
+      <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"3. Exit"</span>);
+      <span class="code-type">System</span>.out.<span class="code-method">print</span>(<span class="code-string">"Enter your choice: "</span>);
+      choice = input.<span class="code-method">nextInt</span>();
+    } <span class="code-keyword">while</span> (choice != 3);
+
+    <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Thanks for playing!"</span>);
+  }
+}</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output (will keep showing the menu until user enters '3'):</div>
+                        <pre>--- MENU ---
+1. Start Game
+2. Load Game
+3. Exit
+Enter your choice: </pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                 <a href="java-switch.html" class="previous-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </a>
+                <a href="java-for-loop.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html

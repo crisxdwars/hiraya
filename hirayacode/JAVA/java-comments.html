@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java Comments</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java Comments</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>Leaving Notes in Your Code</h2>
+                <p>Comments are notes that you can leave inside your code. The Java compiler completely ignores them, so they don't affect how your program runs. Their purpose is to help you and other programmers understand the code.</p>
+                <p>Good comments explain the "why" behind your code, not just the "what."</p>
+            </div>
+
+            <div class="tile">
+                <h2>Single-Line Comments (`//`)</h2>
+                <p>Single-line comments start with `//` and continue to the end of the line. They are perfect for brief explanations or labeling parts of your code.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">// Calculate the total price including tax</span>
+<span class="code-keyword">double</span> price = 19.99;
+<span class="code-keyword">double</span> taxRate = 0.12; <span class="code-comment">// 12% VAT</span>
+<span class="code-keyword">double</span> totalPrice = price * (1 + taxRate);
+
+<span class="code-type">System</span>.out.<span class="code-method">println</span>(totalPrice);</code></pre>
+                    </div>
+                     <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>22.3888</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2>Multi-Line Comments (`/* ... */`)</h2>
+                <p>Multi-line comments start with `/*` and end with `*/`. They can span multiple lines and are useful for longer explanations or for temporarily disabling a block of code while you're testing something else.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">/*
+  This block of code is temporarily disabled for testing.
+  It was causing an issue with the user's final score calculation.
+  We will re-enable it after debugging.
+
+  int bonusPoints = 50;
+  playerScore = playerScore + bonusPoints;
+*/</span>
+<span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Testing without bonus points."</span>);</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Testing without bonus points.</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                 <a href="java-output.html" class="previous-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </a>
+                <a href="java-variables.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html

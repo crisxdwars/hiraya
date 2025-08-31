@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java Type Casting</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java Type Casting</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>Changing a Variable's Type</h2>
+                <p>Type casting is the process of converting a variable from one data type to another. Think of it like moving water between different sized cups.</p>
+            </div>
+
+            <div class="tile">
+                <h2>Widening Casting: Small Cup to Big Cup</h2>
+                <p>Widening casting happens when you move a value from a smaller data type to a larger one (e.g., from an `int` to a `double`). This is safe because no information will be lost, so Java does it automatically.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">// A player's damage is a whole number</span>
+<span class="code-keyword">int</span> playerDamage = 50;
+
+<span class="code-comment">// But the final damage calculation needs decimals for modifiers</span>
+<span class="code-keyword">double</span> finalDamage = playerDamage; <span class="code-comment">// Java automatically converts the int to a double</span>
+
+<span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"The final damage is: "</span> + finalDamage);</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>The final damage is: 50.0</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2>Narrowing Casting: Big Cup to Small Cup</h2>
+                <p>Narrowing casting is when you move a value from a larger type to a smaller one (e.g., from a `double` to an `int`). This can be risky because you might spill some data (lose the decimal part). You must do this manually by telling Java you accept the risk.</p>
+                 <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">// The precise weight of an item is a double</span>
+<span class="code-keyword">double</span> itemWeight = 2.85;
+
+<span class="code-comment">// But our inventory can only store whole numbers for weight</span>
+<span class="code-keyword">int</span> inventoryWeight = (<span class="code-keyword">int</span>) itemWeight; <span class="code-comment">// We manually cast it to an int</span>
+
+<span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"The item's weight in the inventory is: "</span> + inventoryWeight);</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>The item's weight in the inventory is: 2</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+                 <p>Notice that the `.85` was lost in the conversion. This is the "spill" you have to be careful about with narrowing casting.</p>
+            </div>
+
+            <div class="navigation-buttons">
+                 <a href="java-data-types.html" class="previous-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </a>
+                <a href="java-user-input.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html
