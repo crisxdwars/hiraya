@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java Get Started</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java Get Started</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>The `main` Method: Your Program's Engine</h2>
+                <p>Think of a Java program as a spaceship. To launch it, you need to start its engine. In Java, the engine is a special method called `main`. It's the very first piece of code that runs when you execute your program.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">main</span>(<span class="code-type">String</span>[] args) {
+  <span class="code-comment">// All your mission commands go here...</span>
+}</code></pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+                <p>This `main` method is always located inside a `class`, which acts as the blueprint for your spaceship.</p>
+            </div>
+
+            <div class="tile">
+                <h2>The Golden Rule: Matching Filename and Class Name</h2>
+                <p>This is the most important rule for beginners in Java. If your spaceship's blueprint is `public`, its name must exactly match the name of the file it's saved in. This includes capitalization.</p>
+                <p>If you have a `public` class named `Starship`, the file **must** be saved as `Starship.java`.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">// This code must be in a file named "Starship.java"</span>
+<span class="code-keyword">public</span> <span class="code-keyword">class</span> <span class="code-type">Starship</span> {
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">main</span>(<span class="code-type">String</span>[] args) {
+    <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Engine started. Ready for launch!"</span>);
+  }
+}</code></pre>
+                    </div>
+                    <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Engine started. Ready for launch!</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+                <p>If you save this as `starship.java` or `MyShip.java`, the Java compiler will refuse to build it.</p>
+            </div>
+
+            <div class="tile">
+                <h2>What if a Class Isn't `public`?</h2>
+                <p>A Java file can contain multiple class blueprints, but only one can be `public`. If a class is not `public`, it's like a secondary system on your spaceship—it can only be accessed by other parts within the same system (or "package").</p>
+                <p>If your file contains **no public classes**, you are free to name the file anything you want.</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-comment">// This file can be saved as "SystemsCheck.java"</span>
+<span class="code-keyword">class</span> <span class="code-type">EngineControl</span> {
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">main</span>(<span class="code-type">String</span>[] args) {
+    <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Main engine is online."</span>);
+    <span class="code-type">Navigation</span>.<span class="code-method">checkStatus</span>();
+  }
+}
+
+<span class="code-keyword">class</span> <span class="code-type">Navigation</span> {
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">checkStatus</span>() {
+    <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Navigation system is online."</span>);
+  }
+}</code></pre>
+                    </div>
+                     <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Main engine is online.
+Navigation system is online.</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+                <p>Even though this is possible, the best practice is to always have **one `public` class per `.java` file**, with the filename matching the class name. It keeps your project organized and easy to navigate.</p>
+            </div>
+
+            <div class="navigation-buttons">
+                 <a href="java-intro.html" class="previous-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Previous</span>
+                </a>
+                <a href="java-syntax.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html

@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html lang="en" ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiraya | Java Introduction</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="java.css">
+    <link href="../Image/code.ico" type="image/x-icon" rel="icon">
+</head>
+<body>
+
+    <main class="main-container">
+        <header class="page-header">
+            <h1 class="page-title">Java Introduction</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="home-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Home</span>
+                </a>
+                <a href="../java.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="tutorial-content-container">
+            <div class="tile">
+                <h2>What is Java?</h2>
+                <p>Think of Java as a language you use to give instructions to a robot. This "robot" is the Java Virtual Machine (JVM), a program that can run on almost any computer (Windows, Mac, Linux).</p>
+                <p>This is Java's superpower: you write your instructions once, and the JVM can execute them anywhere. This is known as the "Write Once, Run Anywhere" principle.</p>
+            </div>
+
+            <div class="tile">
+                <h2>Why You Should Learn Java?</h2>
+                <ul class="content-list">
+                    <li><strong>It's Everywhere:</strong> From Android apps on your phone to massive enterprise systems, Java is one of the most widely used programming languages in the world.</li>
+                    <li><strong>Strong and Reliable:</strong> Java is known for being secure, fast, and powerful, making it a top choice for building large, complex applications.</li>
+                    <li><strong>Huge Community:</strong> With millions of developers using Java, you'll find a massive community and endless resources to help you learn and solve problems.</li>
+                    <li><strong>Object-Oriented:</strong> Java is built around the concept of "objects," which helps you write clean, organized, and reusable code.</li>
+                </ul>
+            </div>
+
+            <div class="tile">
+                <h2>Your First Command: "Hello, World!"</h2>
+                <p>To give your first command, you need the Java Development Kit (JDK), which is the toolbox for building your instructions.</p>
+                <p>Here is the most basic command you can give—telling your robot to say "Hello, World!":</p>
+                <div class="code-container">
+                    <div class="code-block">
+<pre><code><span class="code-keyword">public</span> <span class="code-keyword">class</span> <span class="code-type">Robot</span> {
+  <span class="code-keyword">public</span> <span class="code-keyword">static</span> <span class="code-keyword">void</span> <span class="code-method">main</span>(<span class="code-type">String</span>[] args) {
+    <span class="code-type">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Hello, World!"</span>);
+  }
+}</code></pre>
+                    </div>
+                     <div class="output-block">
+                        <div class="output-header">Output:</div>
+                        <pre>Hello, World!</pre>
+                    </div>
+                    <div class="code-block-footer">
+                        <button class="copy-button">Copy</button>
+                    </div>
+                </div>
+                <p>Don't worry about understanding every word just yet. We'll break down all these commands in the next lessons.</p>
+            </div>
+
+            <div class="navigation-buttons">
+                <a href="java-get-started.html" class="next-button">
+                    <span>Next</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="java.js"></script>
+</body>
+</html
