@@ -1,4 +1,4 @@
 URL:
 https://crisxdwars.github.io/hiraya/
 
-PDF:
+PDF: https://fileport.io/vbqszLVfz4AQ
