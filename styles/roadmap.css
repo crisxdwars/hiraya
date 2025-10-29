@@ -1,0 +1,158 @@
+/* Hiraya Roadmap Page — Center Line + Alternating Boxes */
+
+body {
+  background-color: #111827;
+  color: #e6e6e6;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.done {
+    color: rgba(99, 230, 190);
+}
+
+.soon {
+    color: rgba(255, 212, 59);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #374151;
+    color: #e5e7eb;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4b5563;
+}
+
+.page-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadmap-container {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  position: relative;
+  user-select: none;
+}
+
+.roadmap-container h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Vertical line in the middle */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ffffff;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0,195,232,0.4);
+}
+
+/* Roadmap Boxes */
+.roadmap-box {
+  position: relative;
+  width: 40%;
+  background-color: #1f2937;
+  padding: 25px 30px;
+  border: 1px solid #374151;
+  border-radius: 5px;
+  margin: 80px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Left side */
+.roadmap-box.left {
+  left: 2.5%;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.roadmap-box.right {
+  left: 50.5%;
+  text-align: left;
+  padding-left: 40px;
+}
+
+/* Connector circles */
+.roadmap-box::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
+}
+
+
+.roadmap-box.left::after {
+  right: -9px;
+}
+
+.roadmap-box.right::after {
+  left: -9px;
+}
+
+.roadmap-box h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.roadmap-box p {
+  line-height: 1;
+}
+
+/* Animation visible state */
+.roadmap-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+  .roadmap-box {
+    width: calc(100% - 40px);
+    left: 20px !important;
+  }
+  .roadmap-box::after {
+    left: -26px;
+  }
+}
