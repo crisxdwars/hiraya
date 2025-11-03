@@ -7,7 +7,6 @@ const languagePicker = document.getElementById('languageSelect');
 const editorTitle = document.getElementById('editorTitle');
 const outputTitle = document.getElementById('outputTitle');
 
-
 function checkJavaCode(userCode) {
     const problemsFound = [];
     const allLines = userCode.split('\n');

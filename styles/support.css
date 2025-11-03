@@ -1,0 +1,126 @@
+body {
+    background-color: #111827;
+    color: #e6e6e6;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.answer {
+    color: rgba(99, 230, 190);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #374151;
+    color: #e5e7eb;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #4b5563;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.025em;
+}
+
+.page-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20%;
+    position: relative;
+    user-select: none;
+}
+
+.question-container h1 {
+    text-align: left;
+    margin-left: 24px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 80px;
+    letter-spacing: 1px;
+}
+
+.question-box {
+    position: relative;
+    width: 40%;
+    background-color: #1f2937;
+    padding: 2px 20px;
+    border: 1px solid #374151;
+    border-radius: 5px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    left: 1.4%;
+    text-align: left;
+    padding-right: 40px;
+}
+
+.question-box h3 {
+    color: #ffffff;
+    margin-top: 5%;
+}
+
+.question-box p {
+    border-top: 1px solid #374151;
+    line-height: 1.4;
+}
+
+.question-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .question-box {
+        width: calc(100% - 40px);
+        left: 20px !important;
+    }
+    .question-box::after {
+        left: -26px;
+    }
+    .search-question {
+        color: white;
+        background-color: #5e5e5e;
+        height: 20px;
+        width: 10rem;
+    }
+}
